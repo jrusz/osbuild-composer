@@ -7,6 +7,8 @@ stages:
   - finish
 
 .base:
+  before_script:
+    - schutzbot/ci_details.sh
   after_script:
     - schutzbot/update_github_status.sh update
     - schutzbot/save_journal.sh
